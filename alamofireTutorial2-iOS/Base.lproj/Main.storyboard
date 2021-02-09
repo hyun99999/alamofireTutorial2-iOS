@@ -26,6 +26,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzu-U5-Fw1">
                                 <rect key="frame" x="187" y="479" width="40" height="30"/>
                                 <state key="normal" title="POST"/>
+                                <connections>
+                                    <action selector="onClickedPostBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gsu-ve-JB8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLa-Ar-bWn">
                                 <rect key="frame" x="130" y="134" width="54.5" height="24"/>
