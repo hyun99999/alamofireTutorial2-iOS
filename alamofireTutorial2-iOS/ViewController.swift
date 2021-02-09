@@ -56,20 +56,20 @@ class ViewController: UIViewController {
             "email": "1234@1234.com",
             "password": "1234"
         ] as Dictionary
-        var request = URLRequest(url: URL(string: url)!)
-               request.httpMethod = "POST"
-               request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-               request.timeoutInterval = 10
-
-        // httpBody 에 parameters 추가
-        do {
-            //dictionary 를 array,json으로  json,array 를 dictionary 로 변환.
-            try request.httpBody = JSONSerialization.data(withJSONObject: login, options: [])
-        } catch {
-            print("http Body Error")
-        }
+//        var request = URLRequest(url: URL(string: url)!)
+//               request.httpMethod = "POST"
+//               request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//               request.timeoutInterval = 10
+//
+//        // httpBody 에 parameters 추가
+//        do {
+//            //dictionary 를 array,json으로  json,array 를 dictionary 로 변환.
+//            try request.httpBody = JSONSerialization.data(withJSONObject: login, options: [])
+//        } catch {
+//            print("http Body Error")
+//        }
         
-        AF.request(request).responseString{ (response) in
+        AF.request(url,method: .post, parameters: login, encoding: JSONEncoding.default).responseString{ (response) in
             switch response.result{
             case .success:
                 print("POST success!")
